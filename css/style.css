@@ -52,7 +52,7 @@ footer nav ul li {
 
 .modal {
   width: 500px;
-  height: 500px;
+  height: 300px;
   background-color: #c2185b;
   position: absolute;
   top: 50%;
@@ -72,3 +72,20 @@ footer nav ul li {
   }
 }
 
+.modal-content {
+    height: 300px;
+    background-color: #c2185b;
+    color: #fff;
+    justify-content: center;
+    text-align: center;
+}
+
+.cancel {
+    border-radius: 50px;
+    margin: 10% 30% 0 20%;
+    float: inline-start;
+}
+
+.res {
+    border-radius: 50px;
+}
