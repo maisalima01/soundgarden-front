@@ -49,6 +49,7 @@ async function deleteEvento(id) {
     console.log(response);
   } catch (error) {
     console.log(error);
+    alert("Ocorreu um erro inesperado. Tente novamente, por favor.")
   }
 }
 
@@ -58,5 +59,4 @@ buttonDelete.onclick = function () {
   alert("Evento excluído com sucesso!");
   window.location.href = "/soundgarden-front/eventos.html";
 };
-
 
