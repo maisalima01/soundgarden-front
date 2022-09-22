@@ -19,7 +19,11 @@
         <section class="full d-flex justify-content-center align-items-center"
             style="background-color: #F8BBD0; color: #fff">
             <div class="text-center">
-                <h1>Adicione um banner maneiro aqui</h1>
+                <div style="max-width:800px; max-height: 500px;">
+                    <img class="mySlides" src="img/22.png" style="width:100%; max-height: 500px;">
+                    <img class="mySlides" src="img/festa.jpg" style="width:100%; max-height: 500px;">
+                    <img class="mySlides" src="img/soon.png" style="width:100%; max-height: 500px;">
+                </div>
             </div>
         </section>
         <section class="full">
@@ -105,6 +109,28 @@
         </div>
     </footer>
     <script src="reservar-evento.js"></script>
+    <script src="banner.js"></script>
+
+    <h2 class="w3-center">Automatic Slideshow</h2>
+
+
+
+    <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    </script>
 </body>
 
 </html>
