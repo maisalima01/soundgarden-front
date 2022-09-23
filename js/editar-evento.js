@@ -48,7 +48,7 @@ async function editEvent() {
     });
     await response.json();
     alert("Evento editado com sucesso!");
-    window.location.href = "/admin.html";
+    window.location.href = "admin.html";
   } catch (error) {
     console.log(error);
     alert("Ocorreu um erro inesperado. Tente novamente, por favor.");

@@ -34,7 +34,7 @@ async function getEvento(id) {
 
 if (params.id == undefined) {
   alert("O evento a ser excluído não foi informado.");
-  window.location.href = "/eventos.html";
+  window.location.href = "eventos.html";
 } else {
   getEvento(params.id);
 }
@@ -56,5 +56,5 @@ async function deleteEvento(id) {
 buttonDelete.onclick = function () {
   deleteEvento(params.id);
   alert("Evento excluído com sucesso!");
-  window.location.href = "/admin.html";
+  window.location.href = "admin.html";
 };
