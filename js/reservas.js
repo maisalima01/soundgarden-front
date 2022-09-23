@@ -42,7 +42,7 @@ async function getEvent(id) {
 
 if (params.id == undefined) {
   alert("O evento a ser reservado não foi informado.");
-  window.location.href = "admin.html";
+  window.location.replace("../admin.html");
 } else {
   getEvent(params.id);
   getBookings(params.id);
