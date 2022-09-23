@@ -28,12 +28,22 @@ async function getBookings(id) {
 }
 
 async function getEvent(id) {
-  const response = await fetch(`${BASE_URL}/events/${id}`);
-  const event = await response.json();
+  try {
+    const response = await fetch(`${BASE_URL}/events/${id}`);
+    const event = await response.json();
 
-  document.getElementById("eventName").innerHTML = `Reservas do ${event.name}`;
+    document.getElementById(
+      "eventName"
+    ).innerHTML = `Reservas do ${event.name}`;
+  } catch (error) {
+    alert("Ocorreu um erro inesperado. Tente novamente, por favor.");
+  }
 }
 
-getEvent(params.id);
-getBookings(params.id);
-
+if (params.id == undefined) {
+  alert("O evento a ser reservado não foi informado.");
+  window.location.href = "/soundgarden-front/admin.html";
+} else {
+  getEvent(params.id);
+  getBookings(params.id);
+}

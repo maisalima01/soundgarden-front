@@ -1,7 +1,5 @@
 const BASE_URL = "https://xp41-soundgarden-api.herokuapp.com";
 
-[1, 2, 3, 4, 5]
-"1, 2, 3, 4, 5" 
 async function getEvents(){
   try {
     const response = await fetch(`${BASE_URL}/events`)

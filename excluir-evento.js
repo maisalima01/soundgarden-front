@@ -8,19 +8,16 @@ const inputData = document.querySelector("#data");
 const inputLotacao = document.querySelector("#lotacao");
 const buttonDelete = document.querySelector(".btn-danger");
 
-//pegando o ID 
+//pegando o ID
 const urlSearchParams = new URLSearchParams(window.location.search);
 const params = Object.fromEntries(urlSearchParams.entries());
 
 //listando evento pelo id
 async function getEvento(id) {
   try {
-    const response = await fetch(
-      `${BASE_URL}/events/${id}`,
-      {
-        method: "GET",
-      }
-    );
+    const response = await fetch(`${BASE_URL}/events/${id}`, {
+      method: "GET",
+    });
 
     const data = await response.json();
 
@@ -35,21 +32,23 @@ async function getEvento(id) {
   }
 }
 
-getEvento(params.id);
+if (params.id == undefined) {
+  alert("O evento a ser excluído não foi informado.");
+  window.location.href = "/soundgarden-front/eventos.html";
+} else {
+  getEvento(params.id);
+}
 
 //função deletar evento
 async function deleteEvento(id) {
   try {
-    const response = await fetch(
-      `${BASE_URL}/events/${id}`,
-      {
-        method: "DELETE",
-      }
-    );
+    const response = await fetch(`${BASE_URL}/events/${id}`, {
+      method: "DELETE",
+    });
     console.log(response);
   } catch (error) {
     console.log(error);
-    alert("Ocorreu um erro inesperado. Tente novamente, por favor.")
+    alert("Ocorreu um erro inesperado. Tente novamente, por favor.");
   }
 }
 
@@ -59,4 +58,3 @@ buttonDelete.onclick = function () {
   alert("Evento excluído com sucesso!");
   window.location.href = "/soundgarden-front/eventos.html";
 };
-
