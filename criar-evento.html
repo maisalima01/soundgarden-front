@@ -55,7 +55,7 @@
             </aside>
             <main class="col-9  p-5">
                 <div class="my-5">
-                    <h1>Editar evento</h1>
+                    <h1>Criar evento</h1>
                 </div>
                 <div>
                     <!-- - cadastro de evento (nome, atrações, descrição, horário, data, numero de ingressos) -->
@@ -81,13 +81,13 @@
                         <div class="mb-3">
                             <label for="data" class="form-label">Data</label>
                             <input type="date" name="data" id="dataEvento" class="form-control"
-                                placeholder="00/00/00 00:00" value="1999-09-20">
+                                placeholder="00/00/00 00:00" value="2022-09-20">
                         </div>
                         <div class="mb-3">
                             <label for="lotacao" class="form-label">Lotação (número de ingressos disponiveis)</label>
                             <input type="number" class="form-control" id="lotacao" aria-describedby="lotacao">
                         </div>
-                        <button type="button" class="btn btn-primary" onclick="editEvent()">enviar</button>
+                        <button type="button" class="btn btn-primary" onclick="createNewEvent()">enviar</button>
                     </form>
                 </div>
             </main>
@@ -96,7 +96,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
-    <script src="editar-evento.js"></script>
+    <script src="criar-evento.js"></script>
 </body>
 
 </html>
