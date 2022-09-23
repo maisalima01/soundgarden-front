@@ -22,7 +22,7 @@ async function createNewEvent() {
     });
     await response.json();
     alert("Evento criado com sucesso!");
-    window.location.replace("../admin.html");
+    window.location.replace("./admin.html");
   } catch (error) {
     console.log(error);
     alert("Ocorreu um erro inesperado. Tente novamente, por favor.");
